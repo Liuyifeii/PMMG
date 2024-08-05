@@ -1,7 +1,7 @@
 # PMMG
 
 <div align="center">
-  <img src="https://github.com/molecule-generator-collection/ChemTSv2/blob/master/img/logo.png" width="95%">
+  <img src="https://github.com/Liuyifeii/PMMG/blob/main/img/For%20Table%20of%20Contents%20Only.png" width="95%">
 </div>
 
 
