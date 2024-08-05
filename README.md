@@ -1,7 +1,7 @@
 # PMMG
 
 <div align="center">
-  <img src="https://github.com/Liuyifeii/PMMG/img/For Table of Contents Only.png" width="95%">
+  <img src="https://github.com/Liuyifeii/PMMG/tree/main/img/For Table of Contents Only.png" width="95%">
 </div>
 
 
