@@ -135,5 +135,4 @@ This package is distributed under the MIT License.
 
 ## Contact :pushpin:
 
-- Shoichi Ishida (ishida.sho.nm@yokohama-cu.ac.jp)
-- Kei Terayama (terayama@yokohama-cu.ac.jp).
+- Yifei Liu (yifeiliu@zju.edu.cn)
