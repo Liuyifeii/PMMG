@@ -4,19 +4,6 @@
   <img src="https://github.com/molecule-generator-collection/ChemTSv2/blob/master/img/logo.png" width="95%">
 </div>
 
-ChemTSv2 is a refined and extended version of ChemTS[^1] and MPChemTS[^2].
-The original implementations are available at https://github.com/tsudalab/ChemTS and https://github.com/yoshizoe/mp-chemts, respectively. 
-
-ChemTSv2 provides:
-
-- easy-to-run interface by using only a configuration file
-- easy-to-define framework for users' any reward function, molecular filter, and tree policy
-- various usage examples in the GitHub repository
-
-[^1]: Yang, X., Zhang, J., Yoshizoe, K., Terayama, K., & Tsuda, K. (2017). ChemTS: an efficient python library for de novo molecular generation. Science and Technology of Advanced Materials, 18(1), 972–976. https://doi.org/10.1080/14686996.2017.1401424
-
-[^2]: Yang, X., Aasawat, T., & Yoshizoe, K. (2021). Practical Massively Parallel Monte-Carlo Tree Search Applied to Molecular Design. In International Conference on Learning Representations. https://openreview.net/forum?id=6k7VdojAIK
-
 
 ## How to setup :pushpin:
 
@@ -30,29 +17,6 @@ ChemTSv2 provides:
 4. pyyaml
 5. pandas
 6. joblib
-7. mpi4py: 3.0.3 (for massive parallel mode)
-</details>
-
-### ChemTSv2 with single process mode :red_car:
-<details>
-  <summary>Click to show/hide the instruction</summary>
-
-```bash
-cd YOUR_WORKSPACE
-python3.7 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade chemtsv2
-```
-</details>
-
-### ChemTSv2 with massive parallel mode :airplane:
-
-<details>
-  <summary>Click to show/hide the instruction</summary>
-NOTE: You need to run ChemTSv2-MP on a server where OpenMPI or MPICH is installed.
-If you can't find `mpiexec` command, please consult your server administrator to install such an MPI library.
-
-If you can use/prepare a server with MPI environment, please follow the (a) instruction; otherwise, please follow the (b) instruction.
 
 #### (a) Installation on a server WITH a MPI environment
 
