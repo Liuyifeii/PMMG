@@ -38,16 +38,9 @@ pip install --upgrade chemtsv2
 ```
 </details>
 
-## How to run ChemTSv2 :pushpin:
+## How to run PMMG :pushpin:
 
-### 1. Clone this repository and move into it
-
-```bash
-git clone git@github.com:molecule-generator-collection/ChemTSv2.git
-cd ChemTSv2
-```
-
-### 2. Prepare a reward file
+### 1. Prepare a reward file
 Please refer to `reward/README.md`.
 An example of reward definition for LogP maximization task is as follows.
 ```python
@@ -66,14 +59,14 @@ class LogP_reward(Reward):
         return np.tanh(logp/10)
 ```
 
-### 3. Prepare a config file
+### 2. Prepare a config file
 
 The explanation of options are described in the [Support option/function](#support-optionfunction-pushpin) section. 
 The prepared reward file needs to be specified in `reward_setting`.
 For details, please refer to a sample file ([config/setting.yaml](config/setting.yaml)). 
 If you want to pass any value to `calc_reward_from_objective_values` (e.g., weights for each value), add it in the config file.
 
-### 4. Generate molecules
+### 3. Generate molecules
 
 #### ChemTSv2 with single process mode :red_car:
 
