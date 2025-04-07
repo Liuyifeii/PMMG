@@ -5,40 +5,27 @@
 </div>
 
 
-## How to setup :pushpin:
-
+## Setup :environment:
+```bash
+conda create -n PMMG python=3.7
+```
 ### Requirements :memo:
+
 <details>
   <summary>Click to show/hide requirements</summary>
 
 1. python: 3.7
-2. rdkit: 2021.03.5
-3. tensorflow: 2.5.0
-4. pyyaml
-5. pandas
-6. joblib
+2. rdkit-pypi==2021.03.5
+3. numpy~=1.19.2
+4. tensorflow: 2.5.0
+5. protobuf~=3.9.2
+6. pyyaml
+7. pandas
+8. joblib
 
-#### (a) Installation on a server WITH a MPI environment
-
-```bash
-cd YOUR_WORKSPACE
-python3.7 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade chemtsv2
-pip install mpi4py==3.0.3
-```
-
-#### (b) Installation on a server WITHOUT a MPI environment
-
-```bash
-conda create -n mpchem python=3.7
-# swith to the `mpchem` environment
-conda install -c conda-forge openmpi cxx-compiler mpi mpi4py=3.0.3
-pip install --upgrade chemtsv2
-```
 </details>
 
-## How to run PMMG :pushpin:
+## Run PMMG :
 
 ### 1. Prepare a reward file
 Please refer to `reward/README.md`.
@@ -50,16 +37,9 @@ Please refer to `reward/README.md`.
 #### ChemTSv2 with single process mode :red_car:
 
 ```bash
-chemtsv2 -c config/setting.yaml
+python run.py -c config/setting.yaml
 ```
 
-#### ChemTSv2 with massive parallel mode :airplane:
-
-```bash
-mpiexec -n 4 chemtsv2-mp --config config/setting_mp.yaml
-```
-
-## Advanced usege :pushpin:
 
 ### Extend user-specified SMILES
 
