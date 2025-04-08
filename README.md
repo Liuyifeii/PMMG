@@ -1,4 +1,4 @@
-# PMMG
+# PMMG：A Multi-Objective Molecular Generation Method Based on Pareto Algorithm and Monte Carlo Tree Search
 
 <div align="center">
   <img src="https://github.com/Liuyifeii/PMMG/blob/main/img/For%20Table%20of%20Contents%20Only.png" width="95%">
@@ -13,7 +13,6 @@ Recommend using 'conda' to manage project environments:
 ```bash
 conda create -n PMMG python=3.7
 conda activate PMMG
-python setup.py  # 可选方式
 ```
 <details>
   <summary>Click to show/hide requirements</summary>
