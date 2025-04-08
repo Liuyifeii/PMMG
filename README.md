@@ -35,7 +35,7 @@ conda activate PMMG
 class MyReward:
     def __call__(self, smiles):
         # User defined
-        return score
+        return [score1,score2...]
 ```
 ### 2. Prepare a config file
 please refer to config/7goals_set
