@@ -1,0 +1,67 @@
+basic:
+  c_val: 1.0
+  threshold:
+    type: generation_num
+    generation_num: 5000
+    # time: 12  # 如果将 threshold_type 改为 'time' 可启用
+  output_dir: result/7goals-5000
+  token: model/tokens.pkl
+
+model:
+  architecture: model/model.tf25.json
+  weights: model/model.tf25.best.ckpt.h5
+
+reward:
+  module: reward.7goals_reward
+  class: Tgoals_reward
+
+advanced:
+  expansion_threshold: 0.995
+  simulation_num: 3
+  flush_threshold: -1
+
+policy:
+  module: policy.ucb1
+  class: Ucb1
+
+restart:
+  enabled: False
+  save_checkpoint: False
+  checkpoint_file: chemtsv2.ckpt.pkl
+
+filters:
+  include_filter_result_in_reward: False
+
+  lipinski:
+    enabled: True
+    module: filter.lipinski_filter
+    class: LipinskiFilter
+    type: rule_of_5
+
+  radical:
+    enabled: True
+    module: filter.radical_filter
+    class: RadicalFilter
+
+  pubchem:
+    enabled: True
+    module: filter.pubchem_filter
+    class: PubchemFilter
+
+  sascore:
+    enabled: True
+    module: filter.sascore_filter
+    class: SascoreFilter
+    threshold: 3.5
+
+  ring_size:
+    enabled: True
+    module: filter.ring_size_filter
+    class: RingSizeFilter
+    threshold: 6
+
+  pains:
+    enabled: False
+    module: filter.pains_filter
+    class: PainsFilter
+    type: [pains_a]
