@@ -1,0 +1,17 @@
+paths:
+  dataset: ../data/ZINC.smi
+  output_model_dir: ../model_output
+  output_token: ../model_output/Tokens.pkl
+
+training:
+  epochs: 100
+  batch_size: 512
+  validation_split: 0.1
+  learning_rate: 0.001
+
+model:
+  units: 256
+  maxlen: 200
+  dropout:
+    input: 0.3
+    recurrent: 0
